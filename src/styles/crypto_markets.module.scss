@@ -1,0 +1,338 @@
+.container {
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+}
+
+.wrapper {
+  width: 100%;
+  margin: 0 auto;
+  max-width: 1440px;
+}
+
+.title__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+
+.title {
+  font-size: 36px;
+  font-weight: 500;
+  line-height: 48px;
+  text-transform: none;
+  text-decoration: none;
+  color: rgb(26, 26, 26);
+}
+
+.link {
+  margin-right: 8px;
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22px;
+  text-transform: none;
+  text-decoration: none;
+  color: rgb(26, 26, 26);
+  cursor: pointer !important;
+}
+
+.tables {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.table {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  color: rgb(26, 26, 26);
+  border: 1px solid rgb(235, 235, 235);
+  border-radius: 14px;
+  background: rgb(255, 255, 255);
+  width: 100%;
+  padding: 28px;
+  height: fit-content;
+}
+
+
+.filter__container {
+  display: flex;
+  flex-direction: row;
+}
+
+.filter__title__active {
+  border-bottom: 2px solid transparent;
+  margin-right: 24px;
+  padding: 0 0 12px;
+  color: rgb(38, 173, 96);
+  border-bottom: 2px solid rgb(38, 173, 96);
+  font-family: "IBM Plex Sans", sans-serif;
+  font-size: 16px;
+}
+
+.filter__title {
+  margin-right: 24px;
+  padding: 0 0 12px;
+  cursor: pointer;
+  font-family: "IBM Plex Sans", sans-serif;
+  font-size: 16px;
+  transition: all 0.5s ease-in 0s;
+}
+
+.wrapper__subtitle {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+  margin-top: 24px;
+  border-bottom: 1px solid rgb(235, 235, 235);
+}
+
+.wrapper__subtitle__text {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 15px;
+  text-transform: none;
+  text-decoration: none;
+  color: rgb(170, 170, 170);
+  padding: 16px;
+}
+
+.pairs__container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.pairs__wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.token__wrapper {
+  width: 161px;
+  padding: 16px 16px 16px 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.trading__text {
+  width: 181px;
+}
+
+.price__text {
+  width: 116px;
+}
+
+.change__text {
+  width: 116px;
+}
+
+.chart__text {
+  width: 150px;
+  text-align: right;
+}
+
+.action__text {
+  width: 180px;
+  text-align: right;
+}
+
+
+.token {
+  display: inline;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: rgb(26, 26, 26);
+}
+
+.price {
+  padding: 16px 16px 16px 0;
+  width: 92px;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22px;
+  text-transform: none;
+  text-decoration: none;
+  color: rgb(26, 26, 26);
+}
+
+.percent {
+  padding: 16px;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22px;
+  text-transform: none;
+  text-decoration: none;
+  color: rgb(38, 173, 96);
+  text-align: right;
+}
+
+
+.svg__container {
+  padding: 16px;
+  width: 80px;
+}
+
+.btn__container {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px;
+}
+
+.btn__convert {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22px;
+  font-family: "IBM Plex Sans", sans-serif;
+  text-transform: none;
+  text-decoration: none;
+  width: 55px;
+  border-radius: 0;
+  background-color: transparent;
+  color: rgb(38, 173, 96);
+  border: none;
+  height: 36px;
+  cursor: pointer;
+}
+
+.btn__trade {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22px;
+  font-family: "IBM Plex Sans", sans-serif;
+  text-transform: none;
+  text-decoration: none;
+  width: 55px;
+  border-radius: 6px;
+  gap: 8px;
+  background-color: rgb(153, 248, 167);
+  color: rgb(26, 26, 26);
+  border: 1px solid rgb(153, 248, 167);
+  height: 36px;
+  cursor: pointer;
+}
+
+.table__gainers {
+  box-sizing: border-box;
+  padding: 20px 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  color: rgb(26, 26, 26);
+  border: 1px solid rgb(235, 235, 235);
+  border-radius: 14px;
+  background: rgb(255, 255, 255);
+  height: max-content;
+  min-width: 400px;
+}
+
+.table__gainers__title {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 25px;
+  text-transform: none;
+  text-decoration: none;
+  color: rgb(26, 26, 26);
+  margin-bottom: 16px;
+}
+
+.gainers__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 15px 0;
+}
+
+.gainers__wrapper__token {
+  display: flex;
+  flex-direction: row;
+}
+
+.gainers__img {
+  height: 24px;
+  aspect-ratio: auto 24 / 24;
+  width: 24px;
+  margin-right: 8px;
+}
+
+.token__gainers {
+  display: inline;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: rgb(26, 26, 26);
+  text-align: left;
+  margin-right: 4px;
+}
+
+
+.price__gainers {
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22px;
+  text-transform: none;
+  text-decoration: none;
+  color: rgb(26, 26, 26);
+  text-align: right;
+}
+
+.percent__gainers {
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22px;
+  text-transform: none;
+  text-decoration: none;
+  color: rgb(38, 173, 96);
+  text-align: right;
+}
+
+
+@media screen and (min-width: 600px) {
+  .container {
+    padding: 80px 16px;
+  }
+  .title__container {
+    margin-bottom: 24px;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .container {
+    padding: 80px 32px;
+  }
+  .title__container {
+    margin-bottom: 40px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .container {
+    padding: 100px;
+  }
+  .title__container {
+    margin-bottom: 40px;
+  }
+}

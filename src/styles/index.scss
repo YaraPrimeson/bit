@@ -1,0 +1,166 @@
+@import "reset";
+@import "main";
+@import "header.module";
+
+.react-multi-carousel-item {
+  padding-right: 32px;
+}
+
+.MuiAccordionSummary-content {
+  margin: 0 !important;
+}
+
+.MuiPaper-root.MuiMenu-paper {
+  background-color: rgb(27, 28, 31) !important;
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 6px -2px !important;
+  border-radius: 8px !important;
+  padding: 10px !important;
+  min-width: 144px !important;
+}
+
+.MuiMenu-list {
+  padding: 0 !important;
+}
+
+.MuiMenuItem-root {
+  font-size: 12px !important;
+  font-family: "IBM Plex Sans", sans-serif !important;
+  font-weight: 400 !important;
+  line-height: 15px !important;
+  text-transform: none !important;
+  text-decoration: none !important;
+  color: rgb(255, 255, 255) !important;
+  border-radius: 6px !important;
+  padding: 14px 10px !important;
+  gap: 30px !important;
+  cursor: pointer !important;
+  width: 100% !important;
+
+}
+
+.MuiMenuItem-root.Mui-selected {
+  color: rgb(153, 248, 167) !important;
+  background-color: rgb(38, 40, 44) !important;
+  justify-content: space-between;
+}
+
+
+.input__wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 20px;
+  width: 100%;
+}
+
+.input {
+  max-width: 360px;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 6px;
+  outline: 0;
+  width: 100%;
+  padding-left: 12px;
+  padding-right: 12px;
+  height: 48px;
+  color: rgb(26, 26, 26);
+  border-color: rgb(224, 224, 224);
+  background-color: rgb(255, 255, 255) !important;
+
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+
+  &:hover {
+    border-color: rgb(38, 173, 96);
+  }
+
+  &::placeholder {
+    opacity: 0.5;
+  }
+}
+
+.button__get__started {
+  border-radius: 6px;
+  background-color: rgb(153, 248, 167);
+  color: rgb(26, 26, 26);
+  border: 1px solid rgb(153, 248, 167);
+  padding: 11px;
+  height: 48px;
+  min-width: 107px;
+  cursor: pointer !important;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 26px;
+  font-family: inherit;
+}
+
+//
+
+//stepper-container
+
+//
+.stepper-container {
+  width: 100%;
+  padding: 20px;
+}
+
+.stepper {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  position: relative;
+}
+
+.step-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+  position: relative;
+}
+
+.step {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+  background-color: rgb(20, 21, 23);
+  z-index: 2;
+}
+
+.step-label {
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 30px;
+  text-transform: none;
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  width: fit-content;
+}
+
+.step-dotline {
+  position: absolute;
+  top: 20%;
+  left: 100%;
+  width: calc(100% - 30px);
+  height: 0px;
+  border: 1px dotted rgb(20, 21, 23);
+  transform: translateX(-50%);
+  z-index: 0;
+}
+
+.step-description {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 25px;
+  text-transform: none;
+  text-decoration: none;
+  color: rgb(26, 26, 26);
+  text-align: center;
+  width: 100%;
+  margin-top: 60px;
+}
+

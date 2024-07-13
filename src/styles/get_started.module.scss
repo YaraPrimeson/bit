@@ -1,0 +1,42 @@
+.container {
+  padding: 80px 16px;
+  width: 100%;
+}
+
+.wrapper {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1440px;
+}
+
+.title {
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 40px;
+  text-transform: none;
+  text-decoration: none;
+  color: rgb(26, 26, 26);
+  width: 100%;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+@media screen and (min-width: 600px) {
+  .container {
+    padding: 80px 16px;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .container {
+    padding: 80px 32px;
+  }
+}
+
+
+@media screen and (min-width: 1200px) {
+  .container {
+    padding: 120px;
+  }
+}
+
