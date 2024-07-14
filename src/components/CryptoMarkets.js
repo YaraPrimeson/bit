@@ -31,92 +31,95 @@ const CryptoMarkets = () => {
                             <p className={style.filter__title__active}>Popular Spot</p>
                             <p className={style.filter__title}>Popular Derivatives</p>
                         </div>
-                        <div className={style.wrapper__subtitle}>
-                            <p className={`${style.wrapper__subtitle__text} ${style.trading__text}`}>Trading Pairs</p>
-                            <p className={`${style.wrapper__subtitle__text} ${style.price__text}`}>Price</p>
-                            <p className={`${style.wrapper__subtitle__text} ${style.change__text}`}>24H Change</p>
-                            <p className={`${style.wrapper__subtitle__text} ${style.chart__text}`}>24H Chart</p>
-                            <p className={`${style.wrapper__subtitle__text} ${style.action__text}`}>Action</p>
-                        </div>
-                        <div className={style.pairs__container}>
-                            <div className={style.pairs__wrapper}>
-                                <div className={style.token__wrapper}>
-                                    <img className={style.gainers__img} src={ada} alt="ada token"/>
-                                    <p className={style.token}>ADA <span
-                                        style={{color: "rgb(170, 170, 170)", marginLeft: "4px"}}>USDT</span></p>
-                                </div>
-                                <p className={style.price}>0.51657</p>
-                                <p className={style.percent}>11.07%</p>
-                                <div className={style.svg__container}>
-                                    <Chart1/>
-                                </div>
-                                <div className={style.btn__container}>
-                                    <button className={style.btn__convert}>Convert</button>
-                                    <button className={style.btn__trade}>Trade</button>
-                                </div>
+                        <div className={style.overflow__container}>
+                            <div className={style.wrapper__subtitle}>
+                                <p className={`${style.wrapper__subtitle__text} ${style.trading__text}`}>Trading
+                                    Pairs</p>
+                                <p className={`${style.wrapper__subtitle__text} ${style.price__text}`}>Price</p>
+                                <p className={`${style.wrapper__subtitle__text} ${style.change__text}`}>24H Change</p>
+                                <p className={`${style.wrapper__subtitle__text} ${style.chart__text}`}>24H Chart</p>
+                                <p className={`${style.wrapper__subtitle__text} ${style.action__text}`}>Action</p>
                             </div>
-                            <div className={style.pairs__wrapper}>
-                                <div className={style.token__wrapper}>
-                                    <img className={style.gainers__img} src={atom} alt="atom token"/>
-                                    <p className={style.token}>ATOM <span
-                                        style={{color: "rgb(170, 170, 170)", marginLeft: "4px"}}>USDT</span></p>
+                            <div className={style.pairs__container}>
+                                <div className={style.pairs__wrapper}>
+                                    <div className={style.token__wrapper}>
+                                        <img className={style.gainers__img} src={ada} alt="ada token"/>
+                                        <p className={style.token}>ADA <span
+                                            style={{color: "rgb(170, 170, 170)", marginLeft: "4px"}}>USDT</span></p>
+                                    </div>
+                                    <p className={style.price}>0.51657</p>
+                                    <p className={style.percent}>11.07%</p>
+                                    <div className={style.svg__container}>
+                                        <Chart1/>
+                                    </div>
+                                    <div className={style.btn__container}>
+                                        <button className={style.btn__convert}>Convert</button>
+                                        <button className={style.btn__trade}>Trade</button>
+                                    </div>
                                 </div>
-                                <p className={style.price}>6.2324</p>
-                                <p className={style.percent}>5.06%</p>
-                                <div className={style.svg__container}>
-                                    <Chart2/>
+                                <div className={style.pairs__wrapper}>
+                                    <div className={style.token__wrapper}>
+                                        <img className={style.gainers__img} src={atom} alt="atom token"/>
+                                        <p className={style.token}>ATOM <span
+                                            style={{color: "rgb(170, 170, 170)", marginLeft: "4px"}}>USDT</span></p>
+                                    </div>
+                                    <p className={style.price}>6.2324</p>
+                                    <p className={style.percent}>5.06%</p>
+                                    <div className={style.svg__container}>
+                                        <Chart2/>
+                                    </div>
+                                    <div className={style.btn__container}>
+                                        <button className={style.btn__convert}>Convert</button>
+                                        <button className={style.btn__trade}>Trade</button>
+                                    </div>
                                 </div>
-                                <div className={style.btn__container}>
-                                    <button className={style.btn__convert}>Convert</button>
-                                    <button className={style.btn__trade}>Trade</button>
+                                <div className={style.pairs__wrapper}>
+                                    <div className={style.token__wrapper}>
+                                        <img className={style.gainers__img} src={bnb} alt="bnb token"/>
+                                        <p className={style.token}>BNB <span
+                                            style={{color: "rgb(170, 170, 170)", marginLeft: "4px"}}>USDT</span></p>
+                                    </div>
+                                    <p className={style.price}>538.43</p>
+                                    <p className={style.percent}>3.9%</p>
+                                    <div className={style.svg__container}>
+                                        <Chart3/>
+                                    </div>
+                                    <div className={style.btn__container}>
+                                        <button className={style.btn__convert}>Convert</button>
+                                        <button className={style.btn__trade}>Trade</button>
+                                    </div>
                                 </div>
-                            </div>
-                            <div className={style.pairs__wrapper}>
-                                <div className={style.token__wrapper}>
-                                    <img className={style.gainers__img} src={bnb} alt="bnb token"/>
-                                    <p className={style.token}>BNB <span
-                                        style={{color: "rgb(170, 170, 170)", marginLeft: "4px"}}>USDT</span></p>
+                                <div className={style.pairs__wrapper}>
+                                    <div className={style.token__wrapper}>
+                                        <img className={style.gainers__img} src={btc} alt="btc token"/>
+                                        <p className={style.token}>BTC <span
+                                            style={{color: "rgb(170, 170, 170)", marginLeft: "4px"}}>USDT</span></p>
+                                    </div>
+                                    <p className={style.price}>58,699.791</p>
+                                    <p className={style.percent}>3.26%</p>
+                                    <div className={style.svg__container}>
+                                        <Chart4/>
+                                    </div>
+                                    <div className={style.btn__container}>
+                                        <button className={style.btn__convert}>Convert</button>
+                                        <button className={style.btn__trade}>Trade</button>
+                                    </div>
                                 </div>
-                                <p className={style.price}>538.43</p>
-                                <p className={style.percent}>3.9%</p>
-                                <div className={style.svg__container}>
-                                    <Chart3/>
-                                </div>
-                                <div className={style.btn__container}>
-                                    <button className={style.btn__convert}>Convert</button>
-                                    <button className={style.btn__trade}>Trade</button>
-                                </div>
-                            </div>
-                            <div className={style.pairs__wrapper}>
-                                <div className={style.token__wrapper}>
-                                    <img className={style.gainers__img} src={btc} alt="btc token"/>
-                                    <p className={style.token}>BTC <span
-                                        style={{color: "rgb(170, 170, 170)", marginLeft: "4px"}}>USDT</span></p>
-                                </div>
-                                <p className={style.price}>58,699.791</p>
-                                <p className={style.percent}>3.26%</p>
-                                <div className={style.svg__container}>
-                                    <Chart4/>
-                                </div>
-                                <div className={style.btn__container}>
-                                    <button className={style.btn__convert}>Convert</button>
-                                    <button className={style.btn__trade}>Trade</button>
-                                </div>
-                            </div>
-                            <div className={style.pairs__wrapper}>
-                                <div className={style.token__wrapper}>
-                                    <img className={style.gainers__img} src={dot} alt="dot token"/>
-                                    <p className={style.token}>DOT <span
-                                        style={{color: "rgb(170, 170, 170)", marginLeft: "4px"}}>USDT</span></p>
-                                </div>
-                                <p className={style.price}>6.2502</p>
-                                <p className={style.percent}>7.54%</p>
-                                <div className={style.svg__container}>
-                                    <Chart5/>
-                                </div>
-                                <div className={style.btn__container}>
-                                    <button className={style.btn__convert}>Convert</button>
-                                    <button className={style.btn__trade}>Trade</button>
+                                <div className={style.pairs__wrapper}>
+                                    <div className={style.token__wrapper}>
+                                        <img className={style.gainers__img} src={dot} alt="dot token"/>
+                                        <p className={style.token}>DOT <span
+                                            style={{color: "rgb(170, 170, 170)", marginLeft: "4px"}}>USDT</span></p>
+                                    </div>
+                                    <p className={style.price}>6.2502</p>
+                                    <p className={style.percent}>7.54%</p>
+                                    <div className={style.svg__container}>
+                                        <Chart5/>
+                                    </div>
+                                    <div className={style.btn__container}>
+                                        <button className={style.btn__convert}>Convert</button>
+                                        <button className={style.btn__trade}>Trade</button>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -129,7 +132,9 @@ const CryptoMarkets = () => {
                                 <p className={style.token__gainers}>XRP <span
                                     style={{color: "rgb(170, 170, 170)", marginLeft: "4px"}}>USDT-P</span></p>
                             </div>
-                            <p className={style.price__gainers}>0.51657</p>
+                            <div className={style.price__gainers__container}>
+                                <p className={style.price__gainers}>0.51657</p>
+                            </div>
                             <p className={style.percent__gainers}>11.07%</p>
                         </div>
                         <div className={style.gainers__wrapper}>
@@ -138,7 +143,9 @@ const CryptoMarkets = () => {
                                 <p className={style.token__gainers}>ADA <span
                                     style={{color: "rgb(170, 170, 170)", marginLeft: "4px"}}>USDT-P</span></p>
                             </div>
-                            <p className={style.price__gainers}>0.422783</p>
+                            <div className={style.price__gainers__container}>
+                                <p className={style.price__gainers}>0.422783</p>
+                            </div>
                             <p className={style.percent__gainers}>5.66%</p>
                         </div>
                         <div className={style.gainers__wrapper}>
@@ -147,7 +154,9 @@ const CryptoMarkets = () => {
                                 <p className={style.token__gainers}>BNB <span
                                     style={{color: "rgb(170, 170, 170)", marginLeft: "4px"}}>USDT-P</span></p>
                             </div>
-                            <p className={style.price__gainers}>535.738</p>
+                            <div className={style.price__gainers__container}>
+                                <p className={style.price__gainers}>535.738</p>
+                            </div>
                             <p className={style.percent__gainers}>2.6%</p>
                         </div>
                     </div>

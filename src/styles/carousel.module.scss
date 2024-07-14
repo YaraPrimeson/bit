@@ -11,6 +11,19 @@
   max-width: 1200px;
 }
 
+.img {
+  width: 270px;
+  height: 170px;
+  border-radius: 14px;
+}
+
+@media (max-width: 800px) {
+  .img {
+    width: 295px;
+    height: 166px;
+  }
+}
+
 //  .carousel-item {
 //    border-radius: 14px;
 //    overflow: hidden;

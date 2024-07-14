@@ -16,12 +16,12 @@ const WelcomeComponent = () => {
                 <img src={elipseLine} className={style.elipseLine} alt="elipse line"/>
                 <div className={style.input__container}>
                     <p className={style.title}>Your new favorite</p>
-                    <p className={style.title}>crypto exchange</p>
+                    <p className={`${style.title} ${style.title__crypto}`}>crypto exchange</p>
                     <p className={style.text}>Buy, sell, trade Bitcoin & other cryptocurrencies</p>
-                    <div className={`${style.input__wrapper} input__wrapper`}>
+                    <div className={style.input__wrapper}>
                         <input name="email" type="text" placeholder="Your Email" value={input}
-                               onChange={(e) => setInput(e.target.value)} className={"input"}/>
-                        <button className={"button__get__started"}>Get started</button>
+                               onChange={(e) => setInput(e.target.value)} className={style.input}/>
+                        <button className={style.button__get__started}>Get started</button>
                     </div>
                 </div>
                 <div className={style.video__container}>

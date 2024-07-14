@@ -12,7 +12,9 @@ const MarqueePrice = () => {
         setAnchorEl(event.currentTarget);
     };
     const handleClose = (name) => {
-        setSelectedMenu(name)
+        if (name) {
+            setSelectedMenu(name);
+        }
         setAnchorEl(null);
     };
 

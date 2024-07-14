@@ -8,6 +8,7 @@
   width: 100%;
   margin: 0 auto;
   max-width: 1440px;
+  padding: 80px 16px;
 }
 
 .title__container {
@@ -319,7 +320,7 @@
   }
 }
 
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 1350px) {
   .container {
     padding: 80px 32px;
   }
@@ -328,7 +329,7 @@
   }
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1400px) {
   .container {
     padding: 100px;
   }
@@ -336,3 +337,109 @@
     margin-bottom: 40px;
   }
 }
+
+@media screen and (max-width: 1400px) {
+  .tables {
+    flex-direction: column;
+  }
+  .price__gainers__container {
+    width: 33%;
+    text-align: right;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .title {
+    font-size: 26px;
+    font-weight: 500;
+    line-height: 34px;
+  }
+  .link {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 20px;
+  }
+  .overflow__container {
+    overflow-x: auto;
+    width: 100%;
+  }
+  .wrapper__subtitle {
+    width: max-content;
+  }
+  .pairs__container {
+    width: max-content;
+  }
+  .trading__text {
+    position: sticky;
+    left: 0;
+    z-index: 1000;
+    background-color: white;
+  }
+  .trading__text {
+    min-width: 140px;
+    width: 140px;
+  }
+  .price__text {
+    min-width: 88px;
+    width: 88px;
+  }
+  .change__text {
+    min-width: 88px;
+    width: 88px;
+  }
+  .chart__text {
+    min-width: 78px;
+    width: 78px;
+  }
+  .action__text {
+    min-width: 145px;
+    width: 145px;
+  }
+  .wrapper__subtitle {
+    border-bottom: none;
+  }
+  .wrapper__subtitle__text {
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 16px;
+    border-bottom: 1px solid rgb(235, 235, 235);
+  }
+
+  .token__wrapper {
+    position: sticky;
+    left: 0;
+    z-index: 1000;
+    background-color: white;
+    min-width: 140px;
+  }
+  .table__gainers {
+    min-width: auto;
+  }
+  .table__gainers__title {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+  }
+  .token__gainers {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 20px;
+  }
+  .price__gainers {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 20px;
+  }
+  .percent__gainers {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 20px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .table__gainers {
+    padding: 18px 20px;
+  }
+}
+

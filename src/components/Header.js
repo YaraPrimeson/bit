@@ -1,7 +1,17 @@
-import React from 'react';
+import React, {useState} from 'react';
 import style from "../styles/header.module.scss";
+import {slide as Menu} from 'react-burger-menu'
+import {Accordion, AccordionDetails, AccordionSummary} from "@mui/material";
 
 const Header = () => {
+    const [isOpen, setIsOpen] = useState(false);
+
+    const onOpen = () => {
+        setIsOpen(true)
+    }
+    const onClose = () => {
+        setIsOpen(false)
+    }
     return (
         <header className={style.header}>
             <div className={style.info__container}>
@@ -48,23 +58,117 @@ const Header = () => {
                     <button className={style.button__login}>Login</button>
                     <button className={style.button__sign}>Sign Up</button>
                 </div>
-                <svg className={style.svg} xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none"
-                     viewBox="0 0 24 24">
-                    <path fill="#FFFFFF"
-                          d="M20.928 13.44c-.576 0-.96.384-.96.96v3.84c0 .288-.096.48-.288.672-.192.192-.384.288-.672.288H5.568c-.288 0-.48-.096-.672-.288-.192-.192-.288-.384-.288-.672V14.4c0-.576-.384-.96-.96-.96s-.96.384-.96.96v3.84c0 .768.288 1.536.864 2.016.48.576 1.248.864 2.016.864h13.44c.768 0 1.536-.288 2.016-.864.48-.576.864-1.248.864-2.016V14.4c0-.48-.384-.96-.96-.96z"></path>
-                    <path fill="#FFFFFF"
-                          d="M11.616 15.072c.096.096.192.192.288.192.096.096.288.096.384.096.096 0 .288 0 .384-.096.096-.096.192-.096.288-.192l4.8-4.8a.928.928 0 000-1.344.928.928 0 00-1.344 0l-3.168 3.168V2.88c0-.576-.384-.96-.96-.96s-.96.384-.96.96v9.216L8.16 8.928a.928.928 0 00-1.344 0 .928.928 0 000 1.344l4.8 4.8z"></path>
-                </svg>
-                <svg className={style.svg} xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none"
-                     viewBox="0 0 24 24">
-                    <path fill="#FFFFFF"
-                          d="M21 18H3c-.4 0-.8-.3-1-.7-.1-.4 0-.9.4-1.1 0 0 2.6-1.9 2.6-8.2 0-1.9.7-3.6 2.1-4.9C8.4 1.7 10.1 1 12 1c1.9 0 3.6.7 4.9 2.1C18.3 4.4 19 6.1 19 8c0 6.3 2.5 8.2 2.6 8.2.4.3.5.7.4 1.1-.1.4-.6.7-1 .7zM5.1 16h13.7C18 14.5 17 12 17 8c0-1.3-.5-2.6-1.5-3.5-.9-1-2.2-1.5-3.5-1.5-1.3 0-2.6.5-3.5 1.5C7.5 5.4 7 6.7 7 8c0 4-1 6.5-1.9 8zM12 23c-.5 0-1-.1-1.5-.4-.5-.3-.8-.6-1.1-1.1l-.5-.9 1.7-1 .5.9c.1.2.2.3.4.4.3.2.7.2 1 0 .2-.1.3-.2.4-.4l.5-.9 1.7 1-.5.9c-.3.5-.6.8-1.1 1.1-.5.3-1 .4-1.5.4z"></path>
-                </svg>
-                <svg className={style.svg} xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none"
-                     viewBox="0 0 24 24">
-                    <path fill="#FFFFFF"
-                          d="M22.9 11C22.4 5.4 17.7 1 12 1S1.6 5.4 1.1 11H1v2h.1c.5 5.6 5.2 10 10.9 10s10.4-4.4 10.9-10h.1l-.1-2zm-2 0h-4c-.2-2.8-1.1-5.4-2.7-7.7 3.6.9 6.3 4 6.7 7.7zM9.1 13H15c-.3 2.7-1.3 5.3-2.9 7.4-1.8-2.1-2.8-4.7-3-7.4zm0-2c.3-2.7 1.3-5.3 2.9-7.4 1.7 2.2 2.7 4.8 2.9 7.4H9.1zm.6-7.7C8.2 5.6 7.3 8.2 7.1 11h-4c.4-3.7 3.1-6.8 6.6-7.7zM3.1 13h4c.2 2.8 1.1 5.4 2.7 7.7-3.6-.9-6.3-4-6.7-7.7zm11.2 7.7c1.5-2.3 2.4-4.9 2.7-7.7h4c-.5 3.7-3.2 6.8-6.7 7.7z"></path>
-                </svg>
+                <div className={style.svg__container}>
+                    <svg className={style.svg} xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none"
+                         viewBox="0 0 24 24">
+                        <path fill="#FFFFFF"
+                              d="M20.928 13.44c-.576 0-.96.384-.96.96v3.84c0 .288-.096.48-.288.672-.192.192-.384.288-.672.288H5.568c-.288 0-.48-.096-.672-.288-.192-.192-.288-.384-.288-.672V14.4c0-.576-.384-.96-.96-.96s-.96.384-.96.96v3.84c0 .768.288 1.536.864 2.016.48.576 1.248.864 2.016.864h13.44c.768 0 1.536-.288 2.016-.864.48-.576.864-1.248.864-2.016V14.4c0-.48-.384-.96-.96-.96z"></path>
+                        <path fill="#FFFFFF"
+                              d="M11.616 15.072c.096.096.192.192.288.192.096.096.288.096.384.096.096 0 .288 0 .384-.096.096-.096.192-.096.288-.192l4.8-4.8a.928.928 0 000-1.344.928.928 0 00-1.344 0l-3.168 3.168V2.88c0-.576-.384-.96-.96-.96s-.96.384-.96.96v9.216L8.16 8.928a.928.928 0 00-1.344 0 .928.928 0 000 1.344l4.8 4.8z"></path>
+                    </svg>
+                    <svg className={style.svg} xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none"
+                         viewBox="0 0 24 24">
+                        <path fill="#FFFFFF"
+                              d="M21 18H3c-.4 0-.8-.3-1-.7-.1-.4 0-.9.4-1.1 0 0 2.6-1.9 2.6-8.2 0-1.9.7-3.6 2.1-4.9C8.4 1.7 10.1 1 12 1c1.9 0 3.6.7 4.9 2.1C18.3 4.4 19 6.1 19 8c0 6.3 2.5 8.2 2.6 8.2.4.3.5.7.4 1.1-.1.4-.6.7-1 .7zM5.1 16h13.7C18 14.5 17 12 17 8c0-1.3-.5-2.6-1.5-3.5-.9-1-2.2-1.5-3.5-1.5-1.3 0-2.6.5-3.5 1.5C7.5 5.4 7 6.7 7 8c0 4-1 6.5-1.9 8zM12 23c-.5 0-1-.1-1.5-.4-.5-.3-.8-.6-1.1-1.1l-.5-.9 1.7-1 .5.9c.1.2.2.3.4.4.3.2.7.2 1 0 .2-.1.3-.2.4-.4l.5-.9 1.7 1-.5.9c-.3.5-.6.8-1.1 1.1-.5.3-1 .4-1.5.4z"></path>
+                    </svg>
+                    <svg className={style.svg} xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none"
+                         viewBox="0 0 24 24">
+                        <path fill="#FFFFFF"
+                              d="M22.9 11C22.4 5.4 17.7 1 12 1S1.6 5.4 1.1 11H1v2h.1c.5 5.6 5.2 10 10.9 10s10.4-4.4 10.9-10h.1l-.1-2zm-2 0h-4c-.2-2.8-1.1-5.4-2.7-7.7 3.6.9 6.3 4 6.7 7.7zM9.1 13H15c-.3 2.7-1.3 5.3-2.9 7.4-1.8-2.1-2.8-4.7-3-7.4zm0-2c.3-2.7 1.3-5.3 2.9-7.4 1.7 2.2 2.7 4.8 2.9 7.4H9.1zm.6-7.7C8.2 5.6 7.3 8.2 7.1 11h-4c.4-3.7 3.1-6.8 6.6-7.7zM3.1 13h4c.2 2.8 1.1 5.4 2.7 7.7-3.6-.9-6.3-4-6.7-7.7zm11.2 7.7c1.5-2.3 2.4-4.9 2.7-7.7h4c-.5 3.7-3.2 6.8-6.7 7.7z"></path>
+                    </svg>
+                </div>
+                <div className={style.burgerVisible}>
+                    <Menu
+                        // pageWrapId={"page-wrap"}
+                        right
+                        isOpen={isOpen}
+                        onOpen={onOpen} onClose={onClose}
+                    >
+                        <main className={style.burger}>
+                            <div className={style.burger__btn__container}>
+                                <button className={style.burger__login}>Login</button>
+                                <button className={style.burger__signup}>Sign Up</button>
+                            </div>
+                            <div className={style.accordion__container}>
+                                <Accordion className={style.accordion}>
+                                    <AccordionSummary
+                                        expandIcon={<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                         fill="none" viewBox="0 0 24 24">
+                                            <path fill="#777777"
+                                                  d="M12 16.5c-.3 0-.5-.1-.7-.3l-7-7c-.4-.4-.4-1 0-1.4.4-.4 1-.4 1.4 0l6.3 6.3 6.3-6.3c.4-.4 1-.4 1.4 0 .4.4.4 1 0 1.4l-7 7c-.2.2-.4.3-.7.3z"></path>
+                                        </svg>}
+                                        className={style.subtitle}
+                                    >
+                                        Markets
+                                    </AccordionSummary>
+                                    <AccordionDetails className={style.text__container}>
+                                        <p className={style.accordion__text}>Market Overview</p>
+                                        <p className={style.accordion__text}>Market Insights</p>
+                                        <p className={style.accordion__text}>Coin Info</p>
+                                    </AccordionDetails>
+                                </Accordion>
+                                <Accordion className={style.accordion}>
+                                    <AccordionSummary
+                                        expandIcon={<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                         fill="none" viewBox="0 0 24 24">
+                                            <path fill="#777777"
+                                                  d="M12 16.5c-.3 0-.5-.1-.7-.3l-7-7c-.4-.4-.4-1 0-1.4.4-.4 1-.4 1.4 0l6.3 6.3 6.3-6.3c.4-.4 1-.4 1.4 0 .4.4.4 1 0 1.4l-7 7c-.2.2-.4.3-.7.3z"></path>
+                                        </svg>}
+                                        className={style.subtitle}
+                                    >
+                                        Trade
+                                    </AccordionSummary>
+                                    <AccordionDetails className={style.text__container}>
+                                        <p className={style.accordion__text}>Convert</p>
+                                        <p className={style.accordion__text}>Spot</p>
+                                    </AccordionDetails>
+                                </Accordion>
+                                <div className={style.wrapper__subtitle}>
+                                    <p className={style.subtitle}>Derivatives</p>
+                                </div>
+                                <Accordion className={style.accordion}>
+                                    <AccordionSummary
+                                        expandIcon={<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                         fill="none" viewBox="0 0 24 24">
+                                            <path fill="#777777"
+                                                  d="M12 16.5c-.3 0-.5-.1-.7-.3l-7-7c-.4-.4-.4-1 0-1.4.4-.4 1-.4 1.4 0l6.3 6.3 6.3-6.3c.4-.4 1-.4 1.4 0 .4.4.4 1 0 1.4l-7 7c-.2.2-.4.3-.7.3z"></path>
+                                        </svg>}
+                                        className={style.subtitle}
+                                    >
+                                        Learn
+                                    </AccordionSummary>
+                                    <AccordionDetails className={style.text__container}>
+                                        <p className={style.accordion__text}>BITFLEX Blog</p>
+                                        <p className={style.accordion__text}>Users Guide</p>
+                                    </AccordionDetails>
+                                </Accordion>
+                                <div className={style.wrapper__subtitle}>
+                                    <p className={style.subtitle}>Affiliate</p>
+                                </div>
+                                <Accordion className={style.accordion}>
+                                    <AccordionSummary
+                                        expandIcon={<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                         fill="none" viewBox="0 0 24 24">
+                                            <path fill="#777777"
+                                                  d="M12 16.5c-.3 0-.5-.1-.7-.3l-7-7c-.4-.4-.4-1 0-1.4.4-.4 1-.4 1.4 0l6.3 6.3 6.3-6.3c.4-.4 1-.4 1.4 0 .4.4.4 1 0 1.4l-7 7c-.2.2-.4.3-.7.3z"></path>
+                                        </svg>}
+                                        className={style.subtitle}
+                                    >
+                                        More
+                                    </AccordionSummary>
+                                    <AccordionDetails className={style.text__container}>
+                                        <p className={style.accordion__text}>Campaigns</p>
+                                        <p className={style.accordion__text}>Referral</p>
+                                        <p className={style.accordion__text}>Rewards Hub</p>
+                                    </AccordionDetails>
+                                </Accordion>
+                            </div>
+                            <div className={style.download__container}>
+                                <button className={style.download}>Download BITFLEX App</button>
+                            </div>
+                        </main>
+                    </Menu>
+                </div>
             </div>
         </header>
     );

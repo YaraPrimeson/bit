@@ -16,18 +16,15 @@ const ReactMultiCarousel = () => {
         <Carousel
             additionalTransfrom={0}
             arrows
-            // autoPlaySpeed={3000}
             centerMode={false}
             className=""
-            // containerClass="container-with-dots"
             containerClass={style.container}
             dotListClass=""
             draggable
             focusOnSelect={false}
-            // infinite
             itemClass=""
             keyBoardControl
-            minimumTouchDrag={80}
+            minimumTouchDrag={10}
             pauseOnHover
             renderArrowsWhenDisabled={false}
             renderButtonGroupOutside={false}
@@ -44,7 +41,7 @@ const ReactMultiCarousel = () => {
                 mobile: {
                     breakpoint: {
                         max: 464,
-                        min: 0
+                        min: 320
                     },
                     items: 1,
                     partialVisibilityGutter: 30
@@ -65,29 +62,12 @@ const ReactMultiCarousel = () => {
             showDots={false}
             sliderClass={style.ul__container}
             slidesToSlide={1}
-            // swipeable
         >
-            <img style={{
-                width: "270px",
-                height: "170px", borderRadius: "14px",
-            }} src={bonus} alt="#"/>
-            <img style={{
-                width: "270px",
-                height: "170px", borderRadius: "14px",
-            }} src={kyc} alt="#"/>
-            <img style={{
-                width: "270px",
-                height: "170px", borderRadius: "14px",
-            }} src={bitflexApp} alt="#"/>
-            <img style={{
-                width: "270px",
-                height: "170px", borderRadius: "14px",
-            }} src={campaign} alt="#"/>
-            <img style={{
-                width: "270px",
-                height: "170px",
-                borderRadius: "14px",
-            }} src={sosialMedia} alt="#"/>
+            <img className={style.img} src={bonus} alt="#"/>
+            <img className={style.img} src={kyc} alt="#"/>
+            <img className={style.img} src={bitflexApp} alt="#"/>
+            <img className={style.img} src={campaign} alt="#"/>
+            <img className={style.img} src={sosialMedia} alt="#"/>
             {/*<img style={{*/}
             {/*    width: "270px",*/}
             {/*    height: "170px",*/}

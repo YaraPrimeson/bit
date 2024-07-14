@@ -44,6 +44,13 @@
   margin-left: auto;
 }
 
+.svg__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
 .svg {
   font-size: 20px;
 }
@@ -88,3 +95,173 @@
   line-height: 22px;
   font-family: "IBM Plex Sans", sans-serif;
 }
+
+.burgerVisible {
+  visibility: hidden;
+  display: none;
+}
+
+.burger {
+  height: calc(100% - 56px);
+  color: rgb(184, 183, 173);
+  margin: 56px 0px 0px;
+  padding-top: 8px;
+  display: flex !important;
+  flex-direction: column;
+  border-top: 1px solid rgb(37, 37, 37);
+}
+
+.burger__btn__container {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  padding: 8px;
+}
+
+.burger__login {
+  display: flex;
+  -webkit-box-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  align-items: center;
+  flex-direction: row;
+  outline: 0px;
+  border-radius: 6px;
+  gap: 8px;
+  position: relative;
+  background-color: rgb(11, 11, 11);
+  color: rgb(255, 255, 255);
+  border: 1px solid rgb(51, 51, 51);
+  padding: 11px;
+  height: 48px;
+  width: 100%;
+  cursor: pointer !important;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 26px;
+  font-family: "IBM Plex Sans", sans-serif;
+}
+
+.burger__signup {
+  border-radius: 6px;
+  gap: 8px;
+  background-color: rgb(255, 255, 255);
+  color: rgb(26, 26, 26);
+  border: 1px solid rgb(224, 224, 224);
+  padding: 11px;
+  height: 48px;
+  width: 100%;
+  cursor: pointer !important;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 26px;
+  font-family: "IBM Plex Sans", sans-serif;
+}
+
+.accordion__container {
+}
+
+.accordion {
+  background-color: transparent !important;
+  color: #fff !important;
+  margin: 0 !important;
+}
+
+.subtitle {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22px;
+  text-transform: none;
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  padding: 16px;
+  width: 100%;
+
+
+}
+
+
+.text__container {
+  background-color: rgb(20, 21, 23);
+}
+
+.accordion__text {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 20px;
+  color: rgb(204, 204, 204);
+  padding: 16px 32px;
+}
+
+.download__container {
+  margin-top: auto;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px 16px !important;
+}
+
+.download {
+  border-radius: 6px;
+  background-color: rgb(11, 11, 11);
+  color: rgb(255, 255, 255);
+  border: 1px solid rgb(51, 51, 51);
+  height: 48px;
+  width: 100%;
+  cursor: pointer !important;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 26px;
+  font-family: "IBM Plex Sans", sans-serif;
+}
+
+@media (max-width: 900px) {
+  .header {
+    padding: 0 16px;
+  }
+  .subtitle {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 20px;
+  }
+  .accordion__text {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 20px;
+  }
+}
+
+@media (max-width: 1140px) {
+  .burgerVisible {
+    visibility: visible;
+    display: block;
+  }
+  .menu__container, .button__login {
+    display: none;
+  }
+  .svg__container {
+    display: none;
+  }
+
+}
+
+@media (max-width: 900px) {
+  .header {
+    padding: 0px 16px;
+  }
+  .button__sign {
+    min-width: 75px;
+  }
+  .login__container {
+    gap: 16px;
+  }
+  .logo__container {
+    width: 148px;
+
+    & svg {
+      width: 100%;
+    }
+  }
+}
+
