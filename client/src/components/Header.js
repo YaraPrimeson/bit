@@ -61,7 +61,7 @@ const Header = () => {
                     <path fill="#FFFFFF"
                           d="M22.1 20.7l-4.5-4.5c1.2-1.5 1.9-3.3 1.9-5.4 0-4.8-3.9-8.6-8.6-8.6-4.8 0-8.6 3.9-8.6 8.6 0 4.8 3.9 8.6 8.6 8.6 2 0 3.9-.7 5.4-1.9l4.5 4.5 1.3-1.3zM4.3 10.9c0-3.7 3-6.6 6.6-6.6 3.6 0 6.6 3 6.6 6.6 0 3.6-3 6.6-6.6 6.6-3.6 0-6.6-2.9-6.6-6.6z"></path>
                 </svg>
-                {isWalletPage &&
+                {isWalletPage === "/wallet" &&
                     <div className={style.wallet__icons}>
                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24">
                             <path fill="#FFFFFF"
@@ -75,7 +75,7 @@ const Header = () => {
                         </svg>
                     </div>
                 }
-                {isWalletPage ?
+                {isWalletPage === "/wallet" ?
                     <div className={style.deposit__container}>
                         <button className={style.deposit}>Deposit</button>
                         <div className={style.assets__container}>
@@ -103,7 +103,7 @@ const Header = () => {
 
                 }
                 <div className={style.svg__container}>
-                    {isWalletPage ?
+                    {isWalletPage === "/wallet" ?
                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24">
                             <path fill="#FFFFFF"
                                   d="M12 13.9c-3.3 0-6-2.7-6-6s2.7-6 6-6 6 2.7 6 6-2.7 6-6 6zm0-10c-2.2 0-4 1.8-4 4s1.8 4 4 4 4-1.8 4-4-1.8-4-4-4zM12 23c-4.4 0-8.9-1.4-8.9-4.2 0-2.8 4.5-4.2 8.9-4.2s8.9 1.4 8.9 4.2c0 2.8-4.5 4.2-8.9 4.2zm0-6.4c-4.3 0-6.9 1.4-6.9 2.2 0 .8 2.6 2.2 6.9 2.2 4.3 0 6.9-1.4 6.9-2.2 0-.8-2.6-2.2-6.9-2.2z"></path>
@@ -136,10 +136,10 @@ const Header = () => {
                         onOpen={onOpen} onClose={onClose}
                     >
                         <main className={style.burger}>
-                            {!isWalletPage ?
+                            {isWalletPage !== "/wallet" ?
                                 <div className={style.burger__btn__container}>
-                                    <button className={style.burger__login}>Login</button>
-                                    <button className={style.burger__signup}>Sign Up</button>
+                                    <button onClick={goToWallet} className={style.burger__login}>Login</button>
+                                    <button onClick={goToWallet} className={style.burger__signup}>Sign Up</button>
                                 </div>
                                 : null
                             }
