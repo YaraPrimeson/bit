@@ -55,6 +55,55 @@
   font-size: 20px;
 }
 
+.wallet__icons {
+  display: none;
+  font-size: 20px;
+}
+
+.deposit__container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 24px;
+}
+
+.deposit {
+  background-color: rgb(153, 248, 167);
+  color: rgb(26, 26, 26);
+  border: 1px solid rgb(153, 248, 167);
+  padding: 7px 8px;
+  height: 36px;
+  border-radius: 6px;
+}
+
+.assets__container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.assets {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22px;
+  color: rgb(255, 255, 255);
+  margin-right: 8px;
+}
+
+.orders__container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.orders {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22px;
+  color: rgb(255, 255, 255);
+  margin-right: 8px;
+}
+
 .btn__container {
   display: flex;
   align-items: center;
@@ -237,10 +286,19 @@
     visibility: visible;
     display: block;
   }
+  .wallet__icons {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    gap: 24px;
+  }
   .menu__container, .button__login {
     display: none;
   }
   .svg__container {
+    display: none;
+  }
+  .deposit__container {
     display: none;
   }
 
@@ -256,11 +314,15 @@
   .login__container {
     gap: 16px;
   }
+  .wallet__icons {
+    gap: 16px;
+  }
   .logo__container {
     width: 148px;
 
     & svg {
       width: 100%;
+      max-width: 125px;
     }
   }
 }

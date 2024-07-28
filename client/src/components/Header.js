@@ -12,6 +12,13 @@ const Header = () => {
     const onClose = () => {
         setIsOpen(false)
     }
+
+    const goToWallet = () => {
+        window.location.href = "/wallet"
+    }
+
+    const isWalletPage = window.location.pathname
+
     return (
         <header className={style.header}>
             <div className={style.info__container}>
@@ -54,11 +61,56 @@ const Header = () => {
                     <path fill="#FFFFFF"
                           d="M22.1 20.7l-4.5-4.5c1.2-1.5 1.9-3.3 1.9-5.4 0-4.8-3.9-8.6-8.6-8.6-4.8 0-8.6 3.9-8.6 8.6 0 4.8 3.9 8.6 8.6 8.6 2 0 3.9-.7 5.4-1.9l4.5 4.5 1.3-1.3zM4.3 10.9c0-3.7 3-6.6 6.6-6.6 3.6 0 6.6 3 6.6 6.6 0 3.6-3 6.6-6.6 6.6-3.6 0-6.6-2.9-6.6-6.6z"></path>
                 </svg>
-                <div className={style.btn__container}>
-                    <button className={style.button__login}>Login</button>
-                    <button className={style.button__sign}>Sign Up</button>
-                </div>
+                {isWalletPage &&
+                    <div className={style.wallet__icons}>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24">
+                            <path fill="#FFFFFF"
+                                  d="M12 13.9c-3.3 0-6-2.7-6-6s2.7-6 6-6 6 2.7 6 6-2.7 6-6 6zm0-10c-2.2 0-4 1.8-4 4s1.8 4 4 4 4-1.8 4-4-1.8-4-4-4zM12 23c-4.4 0-8.9-1.4-8.9-4.2 0-2.8 4.5-4.2 8.9-4.2s8.9 1.4 8.9 4.2c0 2.8-4.5 4.2-8.9 4.2zm0-6.4c-4.3 0-6.9 1.4-6.9 2.2 0 .8 2.6 2.2 6.9 2.2 4.3 0 6.9-1.4 6.9-2.2 0-.8-2.6-2.2-6.9-2.2z"></path>
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 24 24">
+                            <path fill="#FFFFFF"
+                                  d="M21 18H3c-.4 0-.8-.3-1-.7-.1-.4 0-.9.4-1.1 0 0 2.6-1.9 2.6-8.2 0-1.9.7-3.6 2.1-4.9C8.4 1.7 10.1 1 12 1c1.9 0 3.6.7 4.9 2.1C18.3 4.4 19 6.1 19 8c0 6.3 2.5 8.2 2.6 8.2.4.3.5.7.4 1.1-.1.4-.6.7-1 .7zM5.1 16h13.7C18 14.5 17 12 17 8c0-1.3-.5-2.6-1.5-3.5-.9-1-2.2-1.5-3.5-1.5-1.3 0-2.6.5-3.5 1.5C7.5 5.4 7 6.7 7 8c0 4-1 6.5-1.9 8zM12 23c-.5 0-1-.1-1.5-.4-.5-.3-.8-.6-1.1-1.1l-.5-.9 1.7-1 .5.9c.1.2.2.3.4.4.3.2.7.2 1 0 .2-.1.3-.2.4-.4l.5-.9 1.7 1-.5.9c-.3.5-.6.8-1.1 1.1-.5.3-1 .4-1.5.4z"></path>
+                            <path fill="#99F8A7"
+                                  d="M24 4.2c0 2.3-1.9 4.2-4.2 4.2-2.3 0-4.2-1.9-4.2-4.2 0-2.3 1.9-4.2 4.2-4.2C22.1 0 24 1.9 24 4.2z"></path>
+                        </svg>
+                    </div>
+                }
+                {isWalletPage ?
+                    <div className={style.deposit__container}>
+                        <button className={style.deposit}>Deposit</button>
+                        <div className={style.assets__container}>
+                            <p className={style.assets}>Assets</p>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none"
+                                 viewBox="0 0 24 24">
+                                <path fill="#FFFFFF"
+                                      d="M12 16.5c-.3 0-.5-.1-.7-.3l-7-7c-.4-.4-.4-1 0-1.4.4-.4 1-.4 1.4 0l6.3 6.3 6.3-6.3c.4-.4 1-.4 1.4 0 .4.4.4 1 0 1.4l-7 7c-.2.2-.4.3-.7.3z"></path>
+                            </svg>
+                        </div>
+                        <div className={style.orders__container}>
+                            <p className={style.orders}>Orders</p>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none"
+                                 viewBox="0 0 24 24">
+                                <path fill="#FFFFFF"
+                                      d="M12 16.5c-.3 0-.5-.1-.7-.3l-7-7c-.4-.4-.4-1 0-1.4.4-.4 1-.4 1.4 0l6.3 6.3 6.3-6.3c.4-.4 1-.4 1.4 0 .4.4.4 1 0 1.4l-7 7c-.2.2-.4.3-.7.3z"></path>
+                            </svg>
+                        </div>
+                    </div>
+                    :
+                    <div className={style.btn__container}>
+                        <button className={style.button__login} onClick={goToWallet}>Login</button>
+                        <button className={style.button__sign} onClick={goToWallet}>Sign Up</button>
+                    </div>
+
+                }
                 <div className={style.svg__container}>
+                    {isWalletPage ?
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24">
+                            <path fill="#FFFFFF"
+                                  d="M12 13.9c-3.3 0-6-2.7-6-6s2.7-6 6-6 6 2.7 6 6-2.7 6-6 6zm0-10c-2.2 0-4 1.8-4 4s1.8 4 4 4 4-1.8 4-4-1.8-4-4-4zM12 23c-4.4 0-8.9-1.4-8.9-4.2 0-2.8 4.5-4.2 8.9-4.2s8.9 1.4 8.9 4.2c0 2.8-4.5 4.2-8.9 4.2zm0-6.4c-4.3 0-6.9 1.4-6.9 2.2 0 .8 2.6 2.2 6.9 2.2 4.3 0 6.9-1.4 6.9-2.2 0-.8-2.6-2.2-6.9-2.2z"></path>
+                        </svg>
+                        :
+                        null
+                    }
                     <svg className={style.svg} xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none"
                          viewBox="0 0 24 24">
                         <path fill="#FFFFFF"
@@ -79,16 +131,18 @@ const Header = () => {
                 </div>
                 <div className={style.burgerVisible}>
                     <Menu
-                        // pageWrapId={"page-wrap"}
                         right
                         isOpen={isOpen}
                         onOpen={onOpen} onClose={onClose}
                     >
                         <main className={style.burger}>
-                            <div className={style.burger__btn__container}>
-                                <button className={style.burger__login}>Login</button>
-                                <button className={style.burger__signup}>Sign Up</button>
-                            </div>
+                            {!isWalletPage ?
+                                <div className={style.burger__btn__container}>
+                                    <button className={style.burger__login}>Login</button>
+                                    <button className={style.burger__signup}>Sign Up</button>
+                                </div>
+                                : null
+                            }
                             <div className={style.accordion__container}>
                                 <Accordion className={style.accordion}>
                                     <AccordionSummary
@@ -160,6 +214,38 @@ const Header = () => {
                                         <p className={style.accordion__text}>Campaigns</p>
                                         <p className={style.accordion__text}>Referral</p>
                                         <p className={style.accordion__text}>Rewards Hub</p>
+                                    </AccordionDetails>
+                                </Accordion>
+                                <Accordion className={style.accordion}>
+                                    <AccordionSummary
+                                        expandIcon={<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                         fill="none" viewBox="0 0 24 24">
+                                            <path fill="#777777"
+                                                  d="M12 16.5c-.3 0-.5-.1-.7-.3l-7-7c-.4-.4-.4-1 0-1.4.4-.4 1-.4 1.4 0l6.3 6.3 6.3-6.3c.4-.4 1-.4 1.4 0 .4.4.4 1 0 1.4l-7 7c-.2.2-.4.3-.7.3z"></path>
+                                        </svg>}
+                                        className={style.subtitle}
+                                    >
+                                        Assets
+                                    </AccordionSummary>
+                                    <AccordionDetails className={style.text__container}>
+                                        <p className={style.accordion__text}>Spot Wallet</p>
+                                        <p className={style.accordion__text}>Derivatives Account</p>
+                                    </AccordionDetails>
+                                </Accordion>
+                                <Accordion className={style.accordion}>
+                                    <AccordionSummary
+                                        expandIcon={<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                         fill="none" viewBox="0 0 24 24">
+                                            <path fill="#777777"
+                                                  d="M12 16.5c-.3 0-.5-.1-.7-.3l-7-7c-.4-.4-.4-1 0-1.4.4-.4 1-.4 1.4 0l6.3 6.3 6.3-6.3c.4-.4 1-.4 1.4 0 .4.4.4 1 0 1.4l-7 7c-.2.2-.4.3-.7.3z"></path>
+                                        </svg>}
+                                        className={style.subtitle}
+                                    >
+                                        Orders
+                                    </AccordionSummary>
+                                    <AccordionDetails className={style.text__container}>
+                                        <p className={style.accordion__text}>Spot Orders</p>
+                                        <p className={style.accordion__text}>Derivatives Orders</p>
                                     </AccordionDetails>
                                 </Accordion>
                             </div>
