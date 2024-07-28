@@ -13,9 +13,9 @@ const Wallet = () => {
 
     useEffect(() => {
         getPrices();
-        // const intervalId = setInterval(getPrices, 20000);
+        const intervalId = setInterval(getPrices, 20000);
 
-        // return () => clearInterval(intervalId);
+        return () => clearInterval(intervalId);
     }, []);
 
 
