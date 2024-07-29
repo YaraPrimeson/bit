@@ -31,7 +31,11 @@ const MainWallet = ({tickerData}) => {
 
 
     const totalSum = truncate(Number(btcSum) + Number(ethSum) + Number(solSum), 2);
-    const totalSumInBTC = truncate(Number(totalSum) / Number(tickerData?.BTC?.price), 4);
+    
+    const totalSumChecked = isNaN(totalSum) ? 0 : totalSum;
+    const btcPriceChecked = (isNaN(btcPrice) || btcPrice === 0) ? 1 : btcPrice;
+
+    const totalSumInBTC = truncate(Number(totalSumChecked) / Number(btcPriceChecked), 4);
 
     return (
         <div className={style.container}>
@@ -85,8 +89,9 @@ const MainWallet = ({tickerData}) => {
                     <div className={style.balance__wrapper}>
                         <p className={style.balance__text}>Total Equity</p>
                         <div className={style.price__wrapper}>
-                            <p className={style.price}>{hidden ? "*****" : totalSumInBTC} BTC</p> <p
-                            className={style.price__grey}>≈ {hidden ? "*****" : totalSum} USD</p>
+                            <p className={style.price}>{hidden ? "*****" : totalSumInBTC ? totalSumInBTC : 0} BTC</p>
+                            <p
+                                className={style.price__grey}>≈ {hidden ? "*****" : totalSum} USD</p>
                         </div>
                     </div>
                     <div className={style.balance__wrapper}>
