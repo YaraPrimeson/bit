@@ -57,7 +57,7 @@ const MainWallet = ({tickerData}) => {
                 <div className={style.assets__wrapper}>
                     <p className={style.assets__text}>Total Assets</p>
                     <div onClick={toggleHidden} className={style.hidden__container}>
-                        {hidden ?
+                        {!hidden ?
                             <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15"
                                  fill="none"
                                  viewBox="0 0 24 24">
@@ -92,7 +92,7 @@ const MainWallet = ({tickerData}) => {
             </div>
             <div className={style.btn__container}>
                 <button className={`${style.btn__active} ${style.btn}`}>
-                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <svg width="17" height="17" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M5.87521 5.87521L14.1248 14.1248M14.1248 14.1248V5.87521M14.1248 14.1248H5.87521"
                               stroke="black" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
                     </svg>
@@ -100,7 +100,7 @@ const MainWallet = ({tickerData}) => {
                     Deposit
                 </button>
                 <button className={style.btn}>
-                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <svg width="17" height="17" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path
                             d="M5.87521 14.1248L14.1248 5.8752M14.1248 5.8752L5.87521 5.8752M14.1248 5.8752L14.1248 14.1248"
                             stroke="#A2F2A9" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
@@ -109,7 +109,7 @@ const MainWallet = ({tickerData}) => {
                     Withdraw
                 </button>
                 <button className={style.btn}>
-                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <svg width="17" height="17" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M16.6667 8.33334H3.33334L6.91668 4.33334M3.33334 11.6667H16.6667L13.0833 15.6667"
                               stroke="#A2F2A9" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
                     </svg>
