@@ -10,10 +10,11 @@ import MarqueeComponentBottom from "../components/MarqueeComponentBottom";
 import CryptoMarkets from "../components/CryptoMarkets";
 import WelcomeComponent from "../components/WelcomeComponent";
 import ReactMultiCarousel from "../components/reactMultiCarousel";
+import Container from "../components/Container";
 
 const MainPage = () => {
     return (
-        <>
+        <Container>
             <WelcomeComponent/>
             <ReactMultiCarousel/>
             <CryptoMarkets/>
@@ -25,7 +26,7 @@ const MainPage = () => {
             <MarqueeComponentBottom/>
             <ReadyToStart/>
             <Partners/>
-        </>
+        </Container>
     );
 };
 
