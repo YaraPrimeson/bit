@@ -4,6 +4,7 @@ import btc from "../assets/icons/btc.svg";
 import eth from "../assets/icons/eth.svg";
 import sol from "../assets/icons/sol.svg";
 import usdt from "../assets/icons/usdt.svg";
+import {NavLink} from "react-router-dom";
 
 const MainWallet = ({tickerData}) => {
     const [hidden, setHidden] = useState(false);
@@ -99,15 +100,14 @@ const MainWallet = ({tickerData}) => {
 
                     Deposit
                 </button>
-                <button className={style.btn}>
+                <NavLink to="/withdraw" className={style.btn}>
                     <svg width="17" height="17" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path
                             d="M5.87521 14.1248L14.1248 5.8752M14.1248 5.8752L5.87521 5.8752M14.1248 5.8752L14.1248 14.1248"
                             stroke="#A2F2A9" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
                     </svg>
-
                     Withdraw
-                </button>
+                </NavLink>
                 <button className={style.btn}>
                     <svg width="17" height="17" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M16.6667 8.33334H3.33334L6.91668 4.33334M3.33334 11.6667H16.6667L13.0833 15.6667"

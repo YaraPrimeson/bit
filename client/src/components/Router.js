@@ -4,6 +4,7 @@ import NavigateToDefault from "./NavigationToDefault";
 import MainPage from "../pages/Main";
 import Wallet from "../pages/Wallet";
 import WalletWeb from "../pages/WalletWeb";
+import Withdraw from "../pages/Withdraw";
 
 const Router = () => {
     return (
@@ -11,6 +12,7 @@ const Router = () => {
             <Route path="/" element={<MainPage/>}/>
             <Route path="/walletweb" element={<WalletWeb/>}/>
             <Route path="/wallet" element={<Wallet/>}/>
+            <Route path="/withdraw" element={<Withdraw/>}/>
             <Route path="/*" element={<NavigateToDefault/>}/>
         </Routes>
     );

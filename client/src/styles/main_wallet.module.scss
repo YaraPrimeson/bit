@@ -126,12 +126,17 @@
   height: 36px;
   width: 100%;
   color: #FFFFFF;
-
+  text-decoration: none;
 }
+
 
 .btn__active {
   background: #A2F2A9;
   color: #000000;
+}
+
+.btn__withdraw{
+
 }
 
 .hide__container {
@@ -247,7 +252,9 @@
 .token__arrow {
   margin-left: 15px;
 }
-
+///////
+//    FOTTER
+//////
 .footer {
   display: flex;
   flex-direction: row;
