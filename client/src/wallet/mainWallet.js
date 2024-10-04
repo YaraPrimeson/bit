@@ -4,7 +4,7 @@ import btc from "../assets/icons/btc.svg";
 import eth from "../assets/icons/eth.svg";
 import sol from "../assets/icons/sol.svg";
 import usdt from "../assets/icons/usdt.svg";
-import {NavLink} from "react-router-dom";
+// import {NavLink} from "react-router-dom";
 
 const MainWallet = ({tickerData}) => {
     const [hidden, setHidden] = useState(false);
@@ -37,7 +37,9 @@ const MainWallet = ({tickerData}) => {
     const btcPriceChecked = (isNaN(btcPrice) || btcPrice === 0) ? 1 : btcPrice;
 
     const totalSumInBTC = truncate(Number(totalSumChecked) / Number(btcPriceChecked), 4);
-
+    const navigateToWithdraw = () => {
+        window.location.href = '/withdraw'
+    }
     return (
         <div className={style.container}>
             <div className={style.spot__container}>
@@ -100,15 +102,15 @@ const MainWallet = ({tickerData}) => {
 
                     Deposit
                 </button>
-                <button className={style.btn}>
-                    <NavLink to="/withdraw" className={style.btn__link}>
-                        <svg width="17" height="17" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M5.87521 14.1248L14.1248 5.8752M14.1248 5.8752L5.87521 5.8752M14.1248 5.8752L14.1248 14.1248"
-                                stroke="#A2F2A9" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-                        </svg>
-                        Withdraw
-                    </NavLink>
+                <button className={style.btn} onClick={navigateToWithdraw}>
+                    {/*<NavLink to="/withdraw" className={style.btn__link}>*/}
+                    <svg width="17" height="17" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M5.87521 14.1248L14.1248 5.8752M14.1248 5.8752L5.87521 5.8752M14.1248 5.8752L14.1248 14.1248"
+                            stroke="#A2F2A9" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                    </svg>
+                    Withdraw
+                    {/*</NavLink>*/}
                 </button>
                 <button className={style.btn}>
                     <svg width="17" height="17" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
