@@ -129,13 +129,29 @@
   text-decoration: none;
 }
 
+.btn__link {
+  gap: 8px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  width: 100%;
+  color: #FFFFFF;
+  height: 100%;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 19px;
+
+}
+
 
 .btn__active {
   background: #A2F2A9;
   color: #000000;
 }
 
-.btn__withdraw{
+.btn__withdraw {
 
 }
 
@@ -252,6 +268,7 @@
 .token__arrow {
   margin-left: 15px;
 }
+
 ///////
 //    FOTTER
 //////
